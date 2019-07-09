@@ -18,7 +18,9 @@ import lk.ac.pdn.service.CourseService;
 @RestController
 public class CourseController {
 
-	@Autowired private CourseService courseService;
+	@Autowired //wire an instance automatically by spring
+	//because server has @service annotation
+	private CourseService courseService;
 	
 	@Value("${welcome.message}")
 	private String welcomeMessage;
@@ -38,6 +40,7 @@ public class CourseController {
         return courseService.getCourseById(id);
     }
 	
+	//@GetMapping(value="/course")
 	@RequestMapping(value="/course", method = RequestMethod.GET)
     public Course courseByParam(@RequestParam("id") String courseId) {
         return courseService.getCourseById(courseId);
