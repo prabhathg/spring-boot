@@ -52,4 +52,18 @@ public class CourseService {
 		courses.remove(new Course(id));
 		return courses;
 	}
+	
+	public Set<Course> modifyCourse(String id, String title) {
+		Course c = getCourseById(id);
+		
+		if(c != null) {
+			c.setTitle(title);
+			courses.add(c);
+			
+			
+			
+		}
+		return courses;
+
+	}
 }

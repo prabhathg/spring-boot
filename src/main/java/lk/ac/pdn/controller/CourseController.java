@@ -18,13 +18,10 @@ import lk.ac.pdn.service.CourseService;
 @RestController
 public class CourseController {
 
-<<<<<<< HEAD
+
 	@Autowired //wire an instance automatcally by 
 	//because service has @ annotation 
-=======
-	@Autowired //wire an instance automatically by spring
-	//because server has @service annotation
->>>>>>> c6b71a4a17e4f13434e911741b8e3adbd1b96a20
+
 	private CourseService courseService;
 	
 	@Value("${welcome.message}")
